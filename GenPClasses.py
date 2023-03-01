@@ -136,7 +136,8 @@ class GenericQueryProcessor(object):
                 FILTER (?doi = "{0}")
                 OPTIONAL {{?venue schema:identifier ?id .}}
                 OPTIONAL {{?venue schema:name ?title }}
-                OPTIONAL {{?venue schema:publisher ?publisher}}    
+                OPTIONAL {{?venue schema:publisher ?publi.
+                ?publi schema:identifier ?publisher}}    
             }}
             """
             venues = get(url_or_path, new_query.format(doi), True)
